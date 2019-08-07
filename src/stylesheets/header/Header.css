@@ -1,0 +1,41 @@
+
+/* align divs along same line */
+.headerWrapper > header, .headerLinksWrapper {
+  display: flex;
+}
+
+.headerLinksWrapper {
+  margin-left: auto;
+}
+
+/* vertical center links - works with flex display */
+.headerLinksWrapper, .nameTextWrapper {
+  align-self: center;
+}
+
+.nameTextWrapper {
+  color: rgb(211, 211, 211);
+  font-size: 1.75em;
+  font-weight: bold;
+}
+
+.selfieThumbnailWrapper {
+  margin: 0.25em 1em;
+}
+
+.headerLinkWrapper {
+  margin-right: 1.5em;
+  margin-left: 0.5em;
+}
+
+/* links */
+.headerLinkWrapper > a {
+  color: rgb(211, 211, 211);
+  font-size: 1.75em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.headerLinkWrapper > a:hover {
+  color: rgb(160, 160, 160);
+}
