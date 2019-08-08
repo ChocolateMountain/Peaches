@@ -1,4 +1,9 @@
 
+.headerWrapper {
+  position: absolute;
+  width: 100%;
+}
+
 /* align divs along same line */
 .headerWrapper > header, .headerLinksWrapper {
   display: flex;

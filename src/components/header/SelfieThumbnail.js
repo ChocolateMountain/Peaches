@@ -22,7 +22,7 @@ export class SelfieThumbnail extends Component {
             onMouseLeave={this.toggleShowNameTextAndFlipThumbnail}>
 
         <ReactCardFlip isFlipped={this.state.isFlipped}>
-          <img src={profilePic} alt="Letao Chen" key="front" onM />
+          <img src={profilePic} alt="Letao Chen" key="front" />
 
           <img src={mountainPic} alt="Mountains" key="back" />
         </ReactCardFlip>

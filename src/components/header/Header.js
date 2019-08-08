@@ -14,17 +14,31 @@ export class Header extends Component {
     firstShowNameTextFlag: false
   };
 
-  toggleShowNameText = () => {
+  componentDidMount() {
+    const el = document.querySelector('.headerWrapper');
     this.setState({
-      showNameText: !this.state.showNameText,
-      firstShowNameTextFlag: true
+      top: el.offsetTop,
+      height: el.offsetHeight
     });
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    this.setState({
+      scroll: window.scrollY
+    });
+  }
+
+  toggleShowNameText = () => {
+    this.setState((state) => ({
+      showNameText: !state.showNameText,
+      firstShowNameTextFlag: true
+    }));
   }
 
   // after mouseLeave, animate backspacing and destroy NameText
   resetFlag = () => {
     this.setState({
-      showNameText: this.state.showNameText,
       firstShowNameTextFlag: false
     });
   }
