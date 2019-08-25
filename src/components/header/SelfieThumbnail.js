@@ -10,21 +10,19 @@ export class SelfieThumbnail extends Component {
     isFlipped: false
   };
 
-  toggleShowNameTextAndFlipThumbnail = (e) => {
-    this.props.toggleShowNameText();
+  toggleFlipNameTextAndFlipThumbnail = (e) => {
+    this.props.toggleFlipNameText();
     this.setState({ isFlipped: !this.state.isFlipped });
   }
 
   render() {
     return (
       <div  className="selfieThumbnailWrapper" 
-            onMouseEnter={this.toggleShowNameTextAndFlipThumbnail}
-            onMouseLeave={this.toggleShowNameTextAndFlipThumbnail}>
+            onMouseEnter={this.toggleFlipNameTextAndFlipThumbnail} >
 
         <ReactCardFlip isFlipped={this.state.isFlipped}>
           <img src={profilePic} alt="Letao Chen" key="front" />
-
-          <img src={mountainPic} alt="Mountains" key="back" />
+          <img src={mountainPic} alt="Chocolate Mountain" key="back" />
         </ReactCardFlip>
       </div>
     )

@@ -1,11 +1,11 @@
 
 .headerWrapper {
-  position: absolute;
+  position: fixed;
   width: 100%;
 }
 
 /* align divs along same line */
-.headerWrapper > header, .headerLinksWrapper {
+.headerWrapper header, .headerLinksWrapper {
   display: flex;
 }
 
@@ -43,4 +43,33 @@
 
 .headerLinkWrapper > a:hover {
   color: rgb(160, 160, 160);
+}
+
+.nameTextWrapper a {
+  color: rgb(211, 211, 211);
+  text-decoration: none;
+}
+
+.nameTextWrapper a:hover {
+  color: rgb(160, 160, 160);
+}
+
+/* showHeader transtion - fade + move out */
+
+.showHeader-enter {
+  opacity: 0.01;
+}
+
+.showHeader-enter.showHeader-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.showHeader-leave {
+  opacity: 1;
+}
+
+.showHeader-leave.showHeader-leave-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
 }

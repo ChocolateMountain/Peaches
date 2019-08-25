@@ -4,57 +4,47 @@ import Typed from 'react-typed';
 export class NameText extends Component {
 
   state = {
-    fullyTyped: false,
-    mouseLeaveBeforeFullyTyped: false
+    ignoreTypedStop: false,
+    flipNameText: false
   };
 
-  shouldComponentUpdate(nextProps) {
-    if (nextProps && !nextProps.showNameText) {
-      this.typed.start();
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.typed && 
+          !nextState.ignoreTypedStop &&                           // only set `ignoreTypedStop` once 
+          nextProps.flipNameText !== nextState.flipNameText) {    // only set upon props update 
 
-      if (!this.state.fullyTyped && !this.state.mouseLeaveBeforeFullyTyped) {
-        this.setState((state) => ({
-          mouseLeaveBeforeFullyTyped: true
-        }));
-      }
+      this.typed.start();                                         // this will trigger `onStringTyped()`, do not call stop()
+      this.setState((state) => ({ 
+        ignoreTypedStop: true,
+        flipNameText: !state.flipNameText
+      }));
     }
     return false;
   }
 
   onStringTyped = (index, typed) => {
-    if (typed && typed.pause && !typed.pause.curString) {
-      typed.stop(); // curString === ""
-
-      if (!this.state.fullyTyped) {
-        this.setState((state) => ({
-          fullyTyped: true
-        }));
-      }
-
-      if (this.state.mouseLeaveBeforeFullyTyped) {
-        typed.start();
-      }
-    }
-  }
-
-  onComplete = (typed) => {
     if (typed) {
-      typed.destroy();
-    } else if (this.typed) {
-      this.typed.destroy();
+      if (!this.state.ignoreTypedStop) {
+        typed.stop();
+      } else {
+        // if we did ignore the stop, reset the flag 
+        this.setState({ ignoreTypedStop: false });
+      }
     }
-    this.props.resetFlag();
   }
 
   render() {
+    const typedStrings = ['<a href="/">Letao Chen</a>', 
+                          '<a href="https://github.com/ChocolateMountain">github.com/ChocolateMountain</a>'];
+
     return (
       <div className="nameTextWrapper" key="nameText">
         <Typed  typedRef={(typed => { this.typed = typed; })} 
-                strings={ ['Letao Chen', ''] } 
+                strings={typedStrings} 
                 onStringTyped={this.onStringTyped} 
                 startDelay={0} backDelay={0} 
-                typeSpeed={10} backSpeed={20} 
-                onComplete={ this.onComplete } />
+                typeSpeed={10} backSpeed={15} 
+                loop={true} />
       </div>
     )
   }

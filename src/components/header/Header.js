@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import SelfieThumbnail from './SelfieThumbnail';
 import NameText from './NameText';
@@ -10,51 +10,49 @@ import '../../stylesheets/header/Header.css';
 export class Header extends Component {
 
   state = {
-    showNameText: false,
-    firstShowNameTextFlag: false
+    flipNameText: false
   };
 
   componentDidMount() {
-    const el = document.querySelector('.headerWrapper');
-    this.setState({
-      top: el.offsetTop,
-      height: el.offsetHeight
-    });
     window.addEventListener('scroll', this.handleScroll);
   }
 
-  handleScroll = () => {
-    this.setState({
-      scroll: window.scrollY
-    });
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
-  toggleShowNameText = () => {
+  handleScroll = (event) => {
+    /** 
+     * todo: transitions
+     *  after scrolling, wait 1 second, then fade + move out the header 
+     * 
+     * careful - make sure this doesnt get called 100 times 
+     */
+
+
+  }
+
+  toggleFlipNameText = () => {
     this.setState((state) => ({
-      showNameText: !state.showNameText,
-      firstShowNameTextFlag: true
+      flipNameText: !state.flipNameText,
     }));
-  }
-
-  // after mouseLeave, animate backspacing and destroy NameText
-  resetFlag = () => {
-    this.setState({
-      firstShowNameTextFlag: false
-    });
   }
 
   render() {
     return (
       <div className="headerWrapper">
-        <header>
-          <SelfieThumbnail toggleShowNameText={this.toggleShowNameText} />
 
-          { this.state.firstShowNameTextFlag && 
-            (<NameText  showNameText={this.state.showNameText} 
-                        resetFlag={this.resetFlag} />) }
+        <ReactCSSTransitionGroup  transitionName="showHeader"
+                                  transitionEnterTimeout={500} 
+                                  transitionLeaveTimeout={500} >
 
-          <HeaderLinks />
-        </header>
+          <header key="headerKey">
+            <SelfieThumbnail toggleFlipNameText={this.toggleFlipNameText} />
+            <NameText flipNameText={this.state.flipNameText} />
+            <HeaderLinks />
+          </header>
+
+        </ReactCSSTransitionGroup>
       </div>
     )
   }
