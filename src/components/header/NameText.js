@@ -35,7 +35,7 @@ export class NameText extends Component {
 
   render() {
     const typedStrings = ['<a href="/">Letao Chen</a>', 
-                          '<a href="https://github.com/ChocolateMountain">github.com/ChocolateMountain</a>'];
+                          '<a href="https://github.com/ChocolateMountain" target="_blank">github.com/ChocolateMountain</a>'];
 
     return (
       <div className="nameTextWrapper" key="nameText">

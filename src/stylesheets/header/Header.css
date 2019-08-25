@@ -55,21 +55,13 @@
 }
 
 /* showHeader transtion - fade + move out */
-
-.showHeader-enter {
-  opacity: 0.01;
-}
-
-.showHeader-enter.showHeader-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.showHeader-leave {
+#headerWrapper {
+  transition: all 0.5s ease;
+  margin-top: 0px;
   opacity: 1;
 }
 
-.showHeader-leave.showHeader-leave-active {
-  opacity: 0.01;
-  transition: opacity 500ms ease-in;
+#headerWrapper.closeHeader {
+  margin-top: -108px;
+  opacity: 0;
 }
