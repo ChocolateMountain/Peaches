@@ -42,8 +42,8 @@ export class NameText extends Component {
         <Typed  typedRef={(typed => { this.typed = typed; })} 
                 strings={typedStrings} 
                 onStringTyped={this.onStringTyped} 
-                startDelay={0} backDelay={0} 
-                typeSpeed={10} backSpeed={15} 
+                startDelay={100} backDelay={0} 
+                typeSpeed={30} backSpeed={15} 
                 loop={true} />
       </div>
     )
