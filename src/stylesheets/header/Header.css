@@ -9,6 +9,7 @@
   background-image: linear-gradient(#38424e, #0b0c10);
 
   font-family: "TypographExtraBold";
+  z-index: 2; /* keep above slideshow - increment if any issues */
 }
 
 /* align divs along same line */

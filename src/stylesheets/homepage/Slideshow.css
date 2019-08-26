@@ -1,7 +1,7 @@
 
 .slideshowWrapper {
-  height: 2000px;
+  height: 900px;
   
-  /* remove later */
-  border: 2px red dotted;
+
+  background-image: linear-gradient(#0b0c10, #19282c);
 }
