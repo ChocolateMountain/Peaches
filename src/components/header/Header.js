@@ -21,7 +21,7 @@ export class Header extends Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
-  toggleCloseHeader = (delay = 1250) => {
+  toggleCloseHeader = (delay = 900) => {
     const headerWrapper = document.getElementById('headerWrapper');
     if (headerWrapper) {
       setTimeout(() => {
@@ -39,7 +39,7 @@ export class Header extends Component {
      */
     if (window.scrollY === 0 && !this.state.headerOpen) {
       // scrolled to top, animate opening the header 
-      this.toggleCloseHeader(500);
+      this.toggleCloseHeader(350);
       this.setState({ headerOpen: true });
     } else if (window.scrollY !== 0 && this.state.headerOpen) {
       // scrolled down, animate closing the header 

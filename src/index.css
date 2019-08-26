@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "TypographLight";
+  src: url("fonts/TYPOGRAPH PRO Light.ttf");
+}
+
 body {
-  /* custom font from google fonts */
-  font-family: 'Comfortaa', cursive;
+  /* custom fonts */
+  font-family: "TypographLight";
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

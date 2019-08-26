@@ -34,8 +34,8 @@ export class NameText extends Component {
   }
 
   render() {
-    const typedStrings = ['<a href="/">Letao Chen</a>', 
-                          '<a href="https://github.com/ChocolateMountain" target="_blank">github.com/ChocolateMountain</a>'];
+    const typedStrings = ['<a href="/">LETAO CHEN</a>', 
+                          '<a href="https://github.com/ChocolateMountain" target="_blank">GITHUB@CHOCOLATEMOUNTAIN</a>'];
 
     return (
       <div className="nameTextWrapper" key="nameText">
@@ -44,7 +44,8 @@ export class NameText extends Component {
                 onStringTyped={this.onStringTyped} 
                 startDelay={100} backDelay={0} 
                 typeSpeed={30} backSpeed={15} 
-                loop={true} />
+                loop={true} 
+                showCursor={false} />
       </div>
     )
   }
