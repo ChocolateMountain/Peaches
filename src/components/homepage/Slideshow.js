@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Fade } from 'react-slideshow-image';
 
+import ImageDescription from './ImageDescription';
+
 import '../../stylesheets/homepage/Slideshow.css';
 import zblSlideshowImage from '../../images/slideshow/zbl_slideshow_image1.png'
 import clickerSlideshowImage from '../../images/slideshow/clicker_slideshow_image2.png';
@@ -17,22 +19,6 @@ export class Slideshow extends Component {
         src: clickerSlideshowImage
       }
     ],
-    imageDescription: [
-      {
-        id: 'zbl_image',
-        header: '.ZBL',
-        shortDescription: 'Patented Zoomable Image Standard',
-        description:  '.zbl (zoombable) images can be zoomed in/out without loss of quality. <br />' +
-                      'O(n) - linear space complexity. <br />' + 
-                      '1 000 000 000 times lighter than gigapixel images that offer similar zooming capabilities.'
-      }, {
-        id: 'clicker_image',
-        header: 'ACLICK',
-        shortDescription: 'Dynamic Desktop Automation Tool',
-        description:  'Simple autoclicker designed for virtual desktop environment automation tasks. <br />' +
-                      'Built with OpenCV/JavaCV.'
-      }
-    ],
     displayedImageId: 'zbl_image'
   };
 
@@ -43,17 +29,11 @@ export class Slideshow extends Component {
 
   render() {
     const fadeProperties = {
-      duration: 7000,
-      transitionDuration: 500,
+      duration: 13000,
+      transitionDuration: 700,
       arrows: false,
       onChange: this.onImageChange
     };
-
-    const { 
-      header, 
-      shortDescription, 
-      description 
-    } = this.state.imageDescription.find(desc => desc.id === this.state.displayedImageId);
 
     return (
       <div className="slideshowWrapper">
@@ -70,21 +50,7 @@ export class Slideshow extends Component {
           </Fade>
         </div>
 
-        <div className="imageDescriptionContainer">
-          <div className="imageDescriptionWrapper">
-            <div className="imageHeaderWrapper">
-              <div className="imageDescriptionHeader">
-                { header }
-              </div>
-              <div className="imageShortDescription">
-                { shortDescription }
-              </div>
-            </div>
-            <div className="imageDescription">
-              { description }
-            </div>
-          </div>
-        </div>
+        <ImageDescription currentImageId={this.state.displayedImageId} key={this.state.displayedImageId + '_key'} />
       </div>
     )
   }
