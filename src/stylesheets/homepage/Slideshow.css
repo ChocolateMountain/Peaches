@@ -8,11 +8,6 @@
   src: url("../../fonts/TYPOGRAPH PRO Ultra Light.ttf");
 }
 
-@font-face {
-  font-family: "AppleLight";
-  src: url("../../fonts/AppleGaramond-Light.ttf");
-}
-
 .slideshowWrapper {
   height: 940px;
   background-image: linear-gradient(#0b0c10, #19282c);
