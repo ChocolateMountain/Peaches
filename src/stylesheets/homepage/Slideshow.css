@@ -1,7 +1,14 @@
 
 .slideshowWrapper {
-  height: 900px;
-  
-
+  height: 920px;
   background-image: linear-gradient(#0b0c10, #19282c);
 }
+
+.each-fade > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
