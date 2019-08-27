@@ -10,6 +10,15 @@
 
   font-family: "TypographExtraBold";
   z-index: 2; /* keep above slideshow - increment if any issues */
+
+  /* container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerWrapper header {
+  width: 1600px;
 }
 
 /* align divs along same line */
@@ -27,37 +36,36 @@
 }
 
 .nameTextWrapper {
-  color: #66fcf1;
+  color: #c7c562;
   font-size: 1.75em;
 }
 
 .selfieThumbnailWrapper {
-  margin: 0.25em 1em;
+  margin-right: 1em;
 }
 
 .headerLinkWrapper {
-  margin-right: 1.75em;
-  margin-left: 0.5em;
+  margin-left: 2em;
 }
 
 /* links */
 .headerLinkWrapper > a {
-  color: #66fcf1;
+  color: #c7c562;
   font-size: 1.75em;
   text-decoration: none;
 }
 
 .headerLinkWrapper > a:hover {
-  color: #45a29e;
+  color: #9c9b50;
 }
 
 .nameTextWrapper a {
-  color: #66fcf1;
+  color: #c7c562;
   text-decoration: none;
 }
 
 .nameTextWrapper a:hover {
-  color: #45a29e;
+  color: #9c9b50;
 }
 
 /* showHeader transtion - fade + move out */

@@ -22,14 +22,14 @@ export class Slideshow extends Component {
         id: 'zbl_image',
         header: '.ZBL',
         shortDescription: 'Patented Zoomable Image Standard',
-        description:  '.zbl (zoombable) images can be zoomed in/out without loss of quality. \n' +
-                      'O(n) - linear space complexity. \n' + 
+        description:  '.zbl (zoombable) images can be zoomed in/out without loss of quality. <br />' +
+                      'O(n) - linear space complexity. <br />' + 
                       '1 000 000 000 times lighter than gigapixel images that offer similar zooming capabilities.'
       }, {
         id: 'clicker_image',
         header: 'ACLICK',
         shortDescription: 'Dynamic Desktop Automation Tool',
-        description:  'Simple autoclicker designed for virtual desktop environment automation tasks. \n' +
+        description:  'Simple autoclicker designed for virtual desktop environment automation tasks. <br />' +
                       'Built with OpenCV/JavaCV.'
       }
     ],
@@ -37,7 +37,6 @@ export class Slideshow extends Component {
   };
 
   onImageChange = (oldIndex, newIndex) => {
-    console.log(`transition from image_${oldIndex} to image_${newIndex}`);
     const newImageId = this.state.images[newIndex].id;
     this.setState({ displayedImageId: newImageId });
   }
@@ -71,15 +70,19 @@ export class Slideshow extends Component {
           </Fade>
         </div>
 
-        <div className="imageDescriptionWrapper">
-          <div className="imageDescriptionHeader">
-            { header }
-          </div>
-          <div className="imageShortDescription">
-            { shortDescription }
-          </div>
-          <div className="imageDescription">
-            { description }
+        <div className="imageDescriptionContainer">
+          <div className="imageDescriptionWrapper">
+            <div className="imageHeaderWrapper">
+              <div className="imageDescriptionHeader">
+                { header }
+              </div>
+              <div className="imageShortDescription">
+                { shortDescription }
+              </div>
+            </div>
+            <div className="imageDescription">
+              { description }
+            </div>
           </div>
         </div>
       </div>
