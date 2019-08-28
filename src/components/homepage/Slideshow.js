@@ -19,12 +19,16 @@ export class Slideshow extends Component {
         src: clickerSlideshowImage
       }
     ],
-    displayedImageId: 'zbl_image'
+    displayedImageId: 'zbl_image',
+    onPageLoadDelayTypedAnimation: true
   };
 
   onImageChange = (oldIndex, newIndex) => {
     const newImageId = this.state.images[newIndex].id;
-    this.setState({ displayedImageId: newImageId });
+    this.setState({
+      displayedImageId: newImageId,
+      onPageLoadDelayTypedAnimation: false
+    });
   }
 
   render() {
@@ -50,7 +54,9 @@ export class Slideshow extends Component {
           </Fade>
         </div>
 
-        <ImageDescription currentImageId={this.state.displayedImageId} key={this.state.displayedImageId + '_key'} />
+        <ImageDescription currentImageId={this.state.displayedImageId} 
+                          key={this.state.displayedImageId + '_key'} 
+                          onPageLoadDelayTypedAnimation={this.state.onPageLoadDelayTypedAnimation} />
       </div>
     )
   }
