@@ -10,10 +10,12 @@ export class Header extends Component {
 
   state = {
     flipNameText: false,
-    headerOpen: true
+    headerOpen: false,
   };
 
   componentDidMount() {
+    this.toggleCloseHeader(50);           // header initially not opened upon page load
+    this.setState({ headerOpen: true });  // set state to open
     window.addEventListener('scroll', this.handleScroll);
   }
 
@@ -56,7 +58,7 @@ export class Header extends Component {
 
   render() {
     return (
-      <div id="headerWrapper" className="headerWrapper">
+      <div id="headerWrapper" className="headerWrapper closeHeader">
         <header key="headerKey">
           <SelfieThumbnail toggleFlipNameText={this.toggleFlipNameText} />
           <NameText flipNameText={this.state.flipNameText} />

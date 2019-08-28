@@ -43,7 +43,7 @@ export class NameText extends Component {
                 strings={typedStrings} 
                 onStringTyped={this.onStringTyped} 
                 startDelay={100} backDelay={0} 
-                typeSpeed={30} backSpeed={15} 
+                typeSpeed={20} backSpeed={10} 
                 loop={true} 
                 showCursor={false} />
       </div>

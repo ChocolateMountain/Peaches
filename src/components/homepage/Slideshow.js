@@ -20,8 +20,18 @@ export class Slideshow extends Component {
       }
     ],
     displayedImageId: 'zbl_image',
-    onPageLoadDelayTypedAnimation: true
+    onPageLoadDelayTypedAnimation: true,
+    onPageLoadFadeIntoFirstImage: true
   };
+
+  // css transition to show first image 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        onPageLoadFadeIntoFirstImage: false
+      });
+    }, 700);
+  }
 
   onImageChange = (oldIndex, newIndex) => {
     const newImageId = this.state.images[newIndex].id;
@@ -39,9 +49,13 @@ export class Slideshow extends Component {
       onChange: this.onImageChange
     };
 
+    const slideshowImageClasses = 
+      this.state.onPageLoadFadeIntoFirstImage ? 
+      "slideshowImageWrapper zeroOpacity" : "slideshowImageWrapper";
+
     return (
       <div className="slideshowWrapper">
-        <div className="slideshowImageWrapper">
+        <div className={slideshowImageClasses}>
           <Fade {...fadeProperties}>
             { this.state.images.map((image, index) => {
                 return (
