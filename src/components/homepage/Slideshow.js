@@ -4,8 +4,8 @@ import { Fade } from 'react-slideshow-image';
 import ImageDescription from './ImageDescription';
 
 import '../../stylesheets/homepage/Slideshow.css';
-import zblSlideshowImage from '../../images/slideshow/zbl_slideshow_image1.png'
-import clickerSlideshowImage from '../../images/slideshow/clicker_slideshow_image2.png';
+import zblSlideshowImage from '../../images/slideshow/zbl_slideshow_image0.png'
+import clickerSlideshowImage from '../../images/slideshow/clicker_slideshow_image0.png';
 
 export class Slideshow extends Component {
 
