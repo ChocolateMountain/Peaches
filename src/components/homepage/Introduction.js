@@ -3,10 +3,11 @@ import { Fade } from 'react-slideshow-image';
 
 import IntroductionDescription from './IntroductionDescription';
 
+import '../../stylesheets/homepage/Introduction.css';
 import grouseMountainIntroPhoto from '../../images/introduction/introduction_photo_grouse.png';
 import garibaldiIntroPhoto from '../../images/introduction/introduction_photo_garibaldi.png';
 import griffintownIntroPhoto from '../../images/introduction/introduction_photo_griff.png';
-import fireworksIntroPhoto from '../../images/introduction/introduction_photo_griff.png';
+import fireworksIntroPhoto from '../../images/introduction/introduction_photo_fireworks.png';
 
 export class Introduction extends Component {
 
@@ -75,6 +76,8 @@ export class Introduction extends Component {
               }) }
           </Fade>
         </div>
+
+        <IntroductionDescription />
       </div>
     )
   }
