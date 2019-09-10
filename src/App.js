@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/header/Header';
-import Slideshow from './components/homepage/Slideshow';
+import Homepage from './components/homepage/Homepage';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div className="App">
           <Header />
 
-          <Route exact path="/" component={Slideshow} />
+          <Route exact path="/" component={Homepage} />
       </div>
     </Router>
   );
