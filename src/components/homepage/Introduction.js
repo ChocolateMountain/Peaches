@@ -28,7 +28,6 @@ export class Introduction extends Component {
       }
     ],
     displayedPhotoId: "grouse_photo",
-    onPageLoadDelayTypedAnimation: true,
     onPageLoadFadeIntoFirstPhoto: true
   };
 
@@ -38,14 +37,13 @@ export class Introduction extends Component {
       this.setState({
         onPageLoadFadeIntoFirstPhoto: false
       });
-    }, 2000);
+    }, 1600);
   }
 
   onPhotoChange = (oldIndex, newIndex) => {
     const newPhotoId = this.state.photos[newIndex].id;
     this.setState({
       displayedPhotoId: newPhotoId,
-      onPageLoadDelayTypedAnimation: false
     });
   }
 
@@ -57,10 +55,9 @@ export class Introduction extends Component {
       onChange: this.onPhotoChange
     };
 
-    // todo 
     const introPhotoClasses = 
       this.state.onPageLoadFadeIntoFirstPhoto ? 
-      "" : "";
+      "introductionPhotoWrapper zeroOpacity" : "introductionPhotoWrapper";
 
     return (
       <div className="introductionWrapper">

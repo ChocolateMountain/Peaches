@@ -1,10 +1,53 @@
 
 .introductionWrapper {
   background-color: #0b0c10;
-  
 }
 
 .photo-container {
-  margin-bottom: 8em;
+  margin-bottom: 2.25em;
   background-color: #2c2f3a;
+}
+
+/* fade in animation - on page load */
+.introductionPhotoWrapper.zeroOpacity {
+  opacity: 0;
+}
+
+.introductionPhotoWrapper {
+  transition: all 0.7s ease-in;
+  opacity: 1;
+}
+
+/* container */
+.introductionDescriptionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 280px;
+  padding-bottom: 1em;
+}
+
+.introductionDescriptionWrapper {
+  width: 1400px;
+}
+
+.introductionDescriptionHeader {
+  color: #c7c562;
+  font-size: 4em;
+  font-family: "TypographExtraBold";
+}
+
+.introductionDescription {
+  color: #b8b8b8;
+  font-size: 1.25em;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  min-height: 90px;
 }
