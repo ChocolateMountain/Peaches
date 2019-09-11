@@ -12,6 +12,18 @@ export class IntroductionDescription extends Component {
     ]
   };
 
+  // avoid memory leaks 
+  componentWillUnmount() {
+    if (this.typedIntroductionDescriptionHeader) {
+      this.typedIntroductionDescriptionHeader.destroy();
+      this.typedIntroductionDescriptionHeader = null;
+    }
+    if (this.typedIntroductionDescription) {
+      this.typedIntroductionDescription.destroy();
+      this.typedIntroductionDescription = null;
+    }
+  }
+
   render() {
     const { header, description } = this.state.introductionDescriptions[0];
 
