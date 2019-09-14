@@ -65,7 +65,7 @@ export class ImageDescription extends Component {
               <Typed  typedRef={(typed => { this.typedImageDescriptionHeader = typed; })} 
                       strings={ [header] } 
                       showCursor={false} 
-                      typeSpeed={80}
+                      typeSpeed={60}
                       startDelay={this.props.onPageLoadDelayTypedAnimation ? 1000 : 100} />
             </div>
             <div className="imageShortDescription">

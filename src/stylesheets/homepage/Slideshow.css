@@ -10,6 +10,7 @@
 
 .slideshowWrapper {
   background-color: #0b0c10;
+  margin-bottom: 4em;
 }
 
 .each-fade > div {
@@ -50,6 +51,7 @@
 .imageShortDescription {
   color: #c7c562;
   font-size: 2.25em;
+  font-style: italic;
 }
 
 .imageDescription {

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Slideshow from './Slideshow';
 import Introduction from './Introduction';
-import Contact from './Contact';
 
 export class Homepage extends Component {
   render() {
@@ -10,7 +9,6 @@ export class Homepage extends Component {
       <div>
         <Slideshow />
         <Introduction />
-        <Contact />
       </div>
     )
   }
