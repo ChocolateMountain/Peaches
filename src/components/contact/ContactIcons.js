@@ -12,21 +12,73 @@ export class ContactIcons extends Component {
     isFlipped: {
       githubIcon: false, 
       linkedinIcon: false 
-    }
+    },
+    onPageLoadFadeIcons: true
   };
 
+  // css fade transition to show icons 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        onPageLoadFadeIcons: false
+      });
+    }, 1800);
+  }
+
+  toggleFlipGithubIcon = (e) => {
+    this.setState(prevState => {
+      return {
+        isFlipped: {
+          githubIcon: !prevState.isFlipped.githubIcon,
+          linkedinIcon: prevState.isFlipped.linkedinIcon
+        }
+      };
+    });
+  }
+
+  toggleFlipLinkedinIcon = (e) => {
+    this.setState(prevState => { 
+      return {
+        isFlipped: {
+          githubIcon: prevState.isFlipped.githubIcon,
+          linkedinIcon: !prevState.isFlipped.linkedinIcon
+        }
+      };
+    });
+  }
+
+  onClickGithubIcon = (e) => {
+    window.open("https://github.com/ChocolateMountain", "_blank", "noopener");
+  }
+
+  onClickLinkedinIcon = (e) => {
+    window.open("https://www.linkedin.com/in/letao-chen-056055138/", "_blank", "noopener");
+  }
+
   render() {
+    const iconClasses = 
+      this.state.onPageLoadFadeIcons ? 
+      "iconWrapper zeroOpacity" : "iconWrapper";
+
     return (
       <div className="contactIconsWrapper">
-        <ReactCardFlip isFlipped={this.state.isFlipped.githubIcon}>
-          <img src={githubIcon} alt="Github" key="front" />
-          <img src={mountainPic} alt="Chocolate Mountain" key="back" />
-        </ReactCardFlip>
-        
-        <ReactCardFlip isFlipped={this.state.isFlipped.linkedinIcon}>
-          <img src={linkedinIcon} alt="LinkedIn" key="front" />
-          <img src={profilePic} alt="Letao Chen" key="back" />
-        </ReactCardFlip>
+        <div  className={iconClasses} 
+              onMouseEnter={this.toggleFlipGithubIcon} 
+              onClick={this.onClickGithubIcon} >
+          <ReactCardFlip isFlipped={this.state.isFlipped.githubIcon}>
+            <img src={githubIcon} alt="Github" key="front" />
+            <img src={mountainPic} alt="Chocolate Mountain" key="back" />
+          </ReactCardFlip>
+        </div>
+
+        <div  className={iconClasses} 
+              onMouseEnter={this.toggleFlipLinkedinIcon} 
+              onClick={this.onClickLinkedinIcon} >
+          <ReactCardFlip isFlipped={this.state.isFlipped.linkedinIcon}>
+            <img src={linkedinIcon} alt="LinkedIn" key="front" />
+            <img src={profilePic} alt="Letao Chen" key="back" />
+          </ReactCardFlip>
+        </div>
       </div>
     )
   }
