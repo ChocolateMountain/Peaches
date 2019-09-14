@@ -63,7 +63,7 @@ export class ContactIcons extends Component {
     return (
       <div className="contactIconsWrapper">
         <div  className={iconClasses} 
-              onMouseEnter={this.toggleFlipGithubIcon} 
+              onMouseEnter={this.toggleFlipGithubIcon} onMouseLeave={this.toggleFlipGithubIcon}
               onClick={this.onClickGithubIcon} >
           <ReactCardFlip isFlipped={this.state.isFlipped.githubIcon}>
             <img src={githubIcon} alt="Github" key="front" />
@@ -72,7 +72,7 @@ export class ContactIcons extends Component {
         </div>
 
         <div  className={iconClasses} 
-              onMouseEnter={this.toggleFlipLinkedinIcon} 
+              onMouseEnter={this.toggleFlipLinkedinIcon} onMouseLeave={this.toggleFlipLinkedinIcon}
               onClick={this.onClickLinkedinIcon} >
           <ReactCardFlip isFlipped={this.state.isFlipped.linkedinIcon}>
             <img src={linkedinIcon} alt="LinkedIn" key="front" />
