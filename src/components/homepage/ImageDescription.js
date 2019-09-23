@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Typed from 'react-typed';
+import Rellax from 'rellax';
 
 export class ImageDescription extends Component {
   state = {
@@ -22,6 +23,13 @@ export class ImageDescription extends Component {
     ],
     shortDescriptionTyped: false
   };
+
+  componentDidMount() {
+    this.rellaxImageDescription = new Rellax('.rellaxImageDescription', {
+      speed: 4,
+      zindex: 2
+    });
+  }
 
   // avoid memory leaks 
   componentWillUnmount() {
@@ -58,7 +66,7 @@ export class ImageDescription extends Component {
     const { header, shortDescription, description } = currentImageDescription;
     
     return (
-      <div className="imageDescriptionContainer">
+      <div className="imageDescriptionContainer rellaxImageDescription">
         <div className="imageDescriptionWrapper">
           <div className="imageHeaderWrapper">
             <div className="imageDescriptionHeader">
