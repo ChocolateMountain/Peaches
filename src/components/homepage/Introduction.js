@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Fade } from 'react-slideshow-image';
+import Rellax from 'rellax';
 
 import IntroductionDescription from './IntroductionDescription';
 
@@ -42,6 +43,10 @@ export class Introduction extends Component {
         onPageLoadFadeIntoFirstPhoto: false
       });
     }, 1600);
+
+    this.rellaxIntroduction = new Rellax('.rellaxIntroduction', {
+      speed: -1
+    });
   }
 
   onPhotoChange = (oldIndex, newIndex) => {
@@ -61,7 +66,8 @@ export class Introduction extends Component {
 
     const introPhotoClasses = 
       this.state.onPageLoadFadeIntoFirstPhoto ? 
-      "introductionPhotoWrapper zeroOpacity" : "introductionPhotoWrapper";
+      "introductionPhotoWrapper zeroOpacity rellaxIntroduction" : 
+      "introductionPhotoWrapper rellaxIntroduction";
 
     return (
       <div className="introductionWrapper">

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Typed from 'react-typed';
+import Rellax from 'rellax';
 
 export class IntroductionDescription extends Component {
 
@@ -11,6 +12,13 @@ export class IntroductionDescription extends Component {
       }
     ]
   };
+
+  componentDidMount() {
+    this.rellaxIntroductionDescription = new Rellax('.rellaxIntroductionDescription', {
+      speed: 4,
+      zindex: 2
+    });
+  }
 
   // avoid memory leaks 
   componentWillUnmount() {
@@ -28,7 +36,7 @@ export class IntroductionDescription extends Component {
     const { header, description } = this.state.introductionDescriptions[0];
 
     return (
-      <div className="introductionDescriptionContainer">
+      <div className="introductionDescriptionContainer rellaxIntroductionDescription">
         <div className="introductionDescriptonWrapper">
           <div className="introductionDescriptionHeader">
             <Typed  typedRef={(typed => { this.typedIntroductionDescriptionHeader = typed; })} 

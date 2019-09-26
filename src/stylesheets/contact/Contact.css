@@ -8,6 +8,8 @@
   align-items: center;    /* vertical centering */
 
   flex-direction: column; /* separate icons on new line */  
+
+  margin-top: -360px;
 }
 
 /* ContactIcons.js */
