@@ -5,6 +5,7 @@ import IntroductionDescription from './IntroductionDescription';
 
 import '../../stylesheets/homepage/Introduction.css';
 import grouseMountainIntroPhoto from '../../images/introduction/introduction_photo_grouse.png';
+import bbqIntroPhoto from '../../images/introduction/introduction_photo_bbq.png';
 import garibaldiIntroPhoto from '../../images/introduction/introduction_photo_garibaldi.png';
 import griffintownIntroPhoto from '../../images/introduction/introduction_photo_griff.png';
 import fireworksIntroPhoto from '../../images/introduction/introduction_photo_fireworks.png';
@@ -16,6 +17,9 @@ export class Introduction extends Component {
       { // play slideshow in this order 
         id: "grouse_photo",
         src: grouseMountainIntroPhoto
+      }, {
+        id: "bbq_photo",
+        src: bbqIntroPhoto
       }, {
         id: "garibaldi_photo",
         src: garibaldiIntroPhoto
