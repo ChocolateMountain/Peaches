@@ -17,7 +17,6 @@
   opacity: 1;
 
   margin-bottom: 6em;
-  margin-top: -100px;
 }
 
 /* container */
@@ -32,6 +31,7 @@
 
   background-color: #1e2730;
   margin-top: 540px;
+  margin-bottom: 70px;
 }
 
 .introductionDescriptionWrapper {

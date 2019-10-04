@@ -15,7 +15,7 @@ export class IntroductionDescription extends Component {
 
   componentDidMount() {
     this.rellaxIntroductionDescription = new Rellax('.rellaxIntroductionDescription', {
-      speed: 4,
+      speed: 2,
       zindex: 2
     });
   }

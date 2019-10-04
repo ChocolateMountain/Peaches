@@ -10,6 +10,8 @@
   flex-direction: column; /* separate icons on new line */  
 
   margin-top: -360px;
+  
+  position: relative;     /* above particles */
 }
 
 /* ContactIcons.js */
