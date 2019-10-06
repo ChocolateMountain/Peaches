@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Typed from 'react-typed';
 import Rellax from 'rellax';
 
+import resume from '../../documents/resume_letaochen_2019.pdf';
+
 export class IntroductionDescription extends Component {
 
   state = {
@@ -32,6 +34,10 @@ export class IntroductionDescription extends Component {
     }
   }
 
+  onResumeClick = (e) => {
+    window.open(resume, "_blank", "noopener");
+  }
+
   render() {
     const { header, description } = this.state.introductionDescriptions[0];
 
@@ -51,6 +57,10 @@ export class IntroductionDescription extends Component {
                     typeSpeed={15}
                     startDelay={2400} />
           </div>
+
+          <button className="resumeButton" onClick={this.onResumeClick} >
+            View Resume
+          </button>
         </div>
       </div>
     )
