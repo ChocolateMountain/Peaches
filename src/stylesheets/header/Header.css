@@ -3,7 +3,7 @@
   src: url("../../fonts/TYPOGRAPH PRO Extra Bold.ttf");
 }
 
-.headerWrapper {
+.desktop .headerWrapper {
   position: fixed;
   width: 100%;
   background-color: #22242e;
@@ -17,65 +17,65 @@
   justify-content: center;
 }
 
-.headerWrapper header {
+.desktop .headerWrapper header {
   width: 1400px;
 }
 
 /* align divs along same line */
-.headerWrapper header, .headerLinksWrapper {
+.desktop .headerWrapper header, .desktop .headerLinksWrapper {
   display: flex;
 }
 
-.headerLinksWrapper {
+.desktop .headerLinksWrapper {
   margin-left: auto;
 }
 
 /* vertical center links - works with flex display */
-.headerLinksWrapper, .nameTextWrapper {
+.desktop .headerLinksWrapper, .desktop .nameTextWrapper {
   align-self: center;
 }
 
-.nameTextWrapper {
+.desktop .nameTextWrapper {
   color: #c7c562;
   font-size: 1.75em;
 }
 
-.selfieThumbnailWrapper {
+.desktop .selfieThumbnailWrapper {
   margin-right: 1em;
 }
 
-.headerLinkWrapper {
+.desktop .headerLinkWrapper {
   margin-left: 2em;
 }
 
 /* links */
-.headerLinkWrapper > a {
+.desktop .headerLinkWrapper > a {
   color: #c7c562;
   font-size: 1.75em;
   text-decoration: none;
 }
 
-.headerLinkWrapper > a:hover {
+.desktop .headerLinkWrapper > a:hover {
   color: #9c9b50;
 }
 
-.nameTextWrapper a {
+.desktop .nameTextWrapper a {
   color: #c7c562;
   text-decoration: none;
 }
 
-.nameTextWrapper a:hover {
+.desktop .nameTextWrapper a:hover {
   color: #9c9b50;
 }
 
 /* showHeader transtion - fade + move out */
-#headerWrapper {
+.desktop #headerWrapper {
   transition: all 0.7s ease;
   margin-top: 0px;
   opacity: 1;
 }
 
-#headerWrapper.closeHeader {
+.desktop #headerWrapper.closeHeader {
   margin-top: -80px;
   opacity: 0;
 }

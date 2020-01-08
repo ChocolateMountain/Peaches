@@ -33,6 +33,14 @@ export class NameText extends Component {
     }
   }
 
+  // avoid memory leaks 
+  componentWillUnmount() {
+    if (this.typed) {
+      this.typed.destroy();
+      this.typed = null;
+    }
+  }
+
   render() {
     const typedStrings = ['<a href="/">LETAO CHEN</a>', 
                           '<a href="https://github.com/ChocolateMountain" rel="noopener noreferrer" target="_blank">GITHUB@CHOCOLATEMOUNTAIN</a>'];

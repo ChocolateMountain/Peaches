@@ -11,7 +11,6 @@ export class HeaderLinks extends Component {
         <div className="headerLinkWrapper">
           <Link to="/timeline">TIMELINE</Link>
         </div>
-        
       </div>
     )
   }

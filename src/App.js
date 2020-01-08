@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Particles from 'react-particles-js';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -6,6 +7,8 @@ import './App.css';
 import Header from './components/header/Header';
 import Homepage from './components/homepage/Homepage';
 import Contact from './components/contact/Contact';
+
+import TabletHeader from './components/mobile/tablet/header/Header';
 
 function App() {
   const particleParams = {
@@ -39,17 +42,40 @@ function App() {
     }
   };
 
-  return (
-    <Router>
-      <div className="App">
-          <Particles  className="particlesBackground" 
-                      params={particleParams} />
-          <Header />
-          <Route exact path="/" component={Homepage} />
-          <Contact />
+  const isDesktop = useMediaQuery({ query: '(min-width: 1400px)' });
+  const isTablet = useMediaQuery({ query: '(min-width: 750px)' }) && !isDesktop;
+  const isPhone = !isTablet && !isDesktop;
+  
+  const responsive = {
+    isDesktop: isDesktop,
+    isTablet: isTablet,
+    isPhone: isPhone
+  };
+
+  let app;
+  if (responsive.isDesktop) {
+    app = (
+      <div className="App desktop">
+        <Particles className="particlesBackground" params={particleParams} />
+        
+        <Header />
+        <Route exact path="/" render={(routeProps) => <Homepage {...routeProps} />} />
+        <Contact />
       </div>
-    </Router>
-  );
+    );
+  } else if (responsive.isTablet || responsive.isPhone) {
+    app = (
+      <div className="App tablet">
+        <Particles className="particlesBackground" params={particleParams} />
+        
+        <TabletHeader />
+        <Route exact path="/" render={(routeProps) => <Homepage {...routeProps} />} />
+        <Contact />
+      </div>
+    );
+  }
+
+  return <Router>{ app }</Router>;
 }
 
 export default App;

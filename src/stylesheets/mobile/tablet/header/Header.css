@@ -1,0 +1,112 @@
+
+/* responsive - tablet - 750px max width */
+
+@font-face {
+  font-family: "TypographExtraBold";
+  src: url("../../../../fonts/TYPOGRAPH PRO Extra Bold.ttf");
+}
+
+.tablet .headerWrapper {
+  position: relative;
+  width: 100%;
+  background-color: #22242e;
+
+  font-family: "TypographExtraBold";
+  z-index: 2; /* keep above slideshow - increment if any issues */
+
+  /* container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tablet .headerWrapper header {
+  width: 750px;
+
+  /* horizontal center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* vertical separation of children */
+  flex-direction: column;
+}
+
+/* vertical center links - works with flex display */
+.tablet .headerLinksWrapper, .tablet .nameTextWrapper {
+  align-self: center;
+}
+
+.tablet .nameTextWrapper {
+  color: #c7c562;
+  font-size: 3em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #5e5b16;
+
+  min-height: 1.375em;
+}
+
+/* links */
+.tablet .nameTextWrapper a {
+  color: #c7c562;
+  text-decoration: none;
+}
+
+.tablet .nameTextWrapper a:hover {
+  color: #9c9b50;
+}
+
+.tablet .headerLinksWrapper {
+  display: flex;
+
+  width: 100%; /* parent for horizonal separation */
+
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.tablet .headerLinkWrapper {
+  /* horizontal separation - evenly divided */
+  text-align: center;
+  flex-basis: 50%;
+}
+
+.tablet .headerLinkWrapper:first-child {
+  border-right: 2px solid #5e5b16;
+}
+
+.tablet .headerLinkWrapper > a {
+  color: #c7c562;
+  font-size: 2.25em;
+  text-decoration: none;
+}
+
+.tablet .headerLinkWrapper > a:hover {
+  color: #9c9b50;
+}
+
+/* header link fade - on page load */
+.tablet .headerLinkWrapper.zeroOpacity {
+  /* can do here since removed after */
+  opacity: 0 !important;
+}
+
+.tablet .headerLinkWrapper:first-child {
+  transition: opacity 1.2s ease-in;
+  opacity: 1;
+}
+
+.tablet .headerLinkWrapper:last-child {
+  transition: opacity 0.4s ease-in;
+  opacity: 1;
+}
+
+/* selfie profile pic fade - on page load */
+.tablet .selfieThumbnailWrapper.zeroOpacity {
+  opacity: 0;
+}
+
+.tablet .selfieThumbnailWrapper {
+  transition: opacity 0.4s ease-in;
+  opacity: 1;
+}
