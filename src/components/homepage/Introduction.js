@@ -49,6 +49,14 @@ export class Introduction extends Component {
     });
   }
 
+  // prevent memory leaks
+  componentWillUnmount() {
+    if (this.rellaxIntroduction) {
+      this.rellaxIntroduction.destroy();
+      this.rellaxIntroduction = null;
+    }
+  }
+
   onPhotoChange = (oldIndex, newIndex) => {
     const newPhotoId = this.state.photos[newIndex].id;
     this.setState({

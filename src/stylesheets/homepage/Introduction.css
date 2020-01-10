@@ -1,18 +1,18 @@
 
-.introductionWrapper {
+.desktop .introductionWrapper {
   background-color: #0b0c10;
 }
 
-.photo-container {
+.desktop .photo-container {
   background-color: #2c2f3a;
 }
 
 /* fade in animation - on page load */
-.introductionPhotoWrapper.zeroOpacity {
+.desktop .introductionPhotoWrapper.zeroOpacity {
   opacity: 0;
 }
 
-.introductionPhotoWrapper {
+.desktop .introductionPhotoWrapper {
   transition: opacity 0.7s ease-in;
   opacity: 1;
 
@@ -20,7 +20,7 @@
 }
 
 /* container */
-.introductionDescriptionContainer {
+.desktop .introductionDescriptionContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,17 +34,17 @@
   margin-bottom: 70px;
 }
 
-.introductionDescriptionWrapper {
+.desktop .introductionDescriptionWrapper {
   width: 1400px;
 }
 
-.introductionDescriptionHeader {
+.desktop .introductionDescriptionHeader {
   color: #c7c562;
   font-size: 4em;
   font-family: "TypographExtraBold";
 }
 
-.introductionDescription {
+.desktop .introductionDescription {
   color: #b8b8b8;
   font-size: 1.25em;
   font-family: 'Courier New', Courier, monospace;
@@ -59,7 +59,7 @@
 }
 
 /* resume button */
-.introductionDescriptonWrapper {
+.desktop .introductionDescriptionWrapper {
   min-width: 1400px;
   min-height: 180px;
   text-align: center;
@@ -67,7 +67,7 @@
   position: relative; /* allows us to give resume button an abs position */
 }
 
-.resumeButton {
+.desktop .resumeButton {
   /* position bottom right corner */
   position: absolute;
   bottom: 0;
@@ -88,7 +88,7 @@
   color: #b8b8b8;
 }
 
-.resumeButton::before {
+.desktop .resumeButton::before {
   content: "";
   display: block;
   position: absolute;
@@ -101,7 +101,7 @@
   transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-.resumeButton::after {
+.desktop .resumeButton::after {
   content: "";
   display: block;
   position: absolute;
@@ -114,19 +114,15 @@
   transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-.resumeButton:hover::before {
+.desktop .resumeButton:hover::before {
   right: 80%;
 }
 
-.resumeButton:hover::after {
+.desktop .resumeButton:hover::after {
   left: 80%;
 }
 
-.resumeButton:focus {
+.desktop .resumeButton:focus {
   /* remove blue outline */
   outline: 0;
 }
-
-
-
-

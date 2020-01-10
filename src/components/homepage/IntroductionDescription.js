@@ -32,6 +32,10 @@ export class IntroductionDescription extends Component {
       this.typedIntroductionDescription.destroy();
       this.typedIntroductionDescription = null;
     }
+    if (this.rellaxIntroductionDescription) {
+      this.rellaxIntroductionDescription.destroy();
+      this.rellaxIntroductionDescription = null;
+    }
   }
 
   onResumeClick = (e) => {
@@ -43,7 +47,7 @@ export class IntroductionDescription extends Component {
 
     return (
       <div className="introductionDescriptionContainer rellaxIntroductionDescription">
-        <div className="introductionDescriptonWrapper">
+        <div className="introductionDescriptionWrapper">
           <div className="introductionDescriptionHeader">
             <Typed  typedRef={(typed => { this.typedIntroductionDescriptionHeader = typed; })} 
                     strings={ [header] } 

@@ -1,2 +1,141 @@
 
 /* responsive - tablet - 750px max width */
+
+.tablet .introductionWrapper {
+  background-color: #0b0c10;
+}
+
+.tablet .photo-container {
+  background-color: #2c2f3a;
+}
+
+/* fade in animation - on page load */
+.tablet .introductionPhotoWrapper.zeroOpacity {
+  opacity: 0;
+}
+
+.tablet .introductionPhotoWrapper {
+  transition: opacity 0.7s ease-in;
+  opacity: 1;
+}
+
+/* before the introduction - add empty space block */
+.tablet .emptyBlock {
+  height: 100px;
+}
+
+/* container */
+.tablet .introductionDescriptionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  min-height: 600px;
+
+  background-color: #1e2730;
+
+  position: relative; /* above particles */
+}
+
+.tablet .introductionDescriptionWrapper {
+  width: 750px;
+
+  display: flex;
+}
+
+.tablet .introductionDescriptionHeader {
+  color: #c7c562;
+  font-size: 4em;
+  font-family: "TypographExtraBold";
+
+  display: flex;
+  flex-direction: column;
+
+  flex-basis: 65%;
+
+  border-right: 2px solid #5e5b16;
+}
+
+.tablet .introductionDescription {
+  color: #b8b8b8;
+  font-size: 1.25em;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  min-height: 90px;
+}
+
+.tablet .introductionDescAndResumeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  flex-basis: 35%;
+  flex-direction: column;
+}
+
+/* resume button */
+.tablet .resumeButton {
+
+  /* no longer absolute position - place under desc */
+  position: relative;
+
+  /* border + transparent background */
+  background: none;
+  border: 0.2em solid #d3a29b;
+
+  /* button size */
+  height: 3.4em;
+  width: 9em;
+
+  /* font */
+  font-family: "TypographLight";
+  font-size: 1.125em;
+  font-weight: bold;
+  color: #b8b8b8;
+}
+
+.tablet .resumeButton::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10%;
+  background: #1e2730;
+  height: 0.3em;
+  right: 20%;
+  top: -0.21em;
+  transform: skewX(-45deg);
+  transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.tablet .resumeButton::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10%;
+  background: #1e2730;
+  height: 0.3em;
+  left: 20%;
+  bottom: -0.25em;
+  transform: skewX(-45deg);
+  transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.tablet .resumeButton:hover::before {
+  right: 80%;
+}
+
+.tablet .resumeButton:hover::after {
+  left: 80%;
+}
+
+.tablet .resumeButton:focus {
+  /* remove blue outline */
+  outline: 0;
+}
