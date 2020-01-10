@@ -69,8 +69,6 @@ export class Introduction extends Component {
 
         <div className="emptyBlock"></div>
         <div className="emptyBlock"></div>
-        <div className="emptyBlock"></div>
-        <div className="emptyBlock"></div>
 
         <div className={introPhotoClasses}>
           <Fade {...fadeProperties}>
@@ -85,8 +83,6 @@ export class Introduction extends Component {
           </Fade>
         </div>
 
-        <div className="emptyBlock"></div>
-        <div className="emptyBlock"></div>
         <div className="emptyBlock"></div>
         <div className="emptyBlock"></div>
 

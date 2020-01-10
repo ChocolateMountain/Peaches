@@ -1,5 +1,5 @@
 /* Contact.js */
-.contactWrapper {
+.desktop .contactWrapper {
   min-height: 540px;
   background-color: #c3bf87;
   
@@ -15,11 +15,11 @@
 }
 
 /* ContactIcons.js */
-.contactIconsWrapper {
+.desktop .contactIconsWrapper {
   display: flex;  
 }
 
-.iconWrapper {
+.desktop .iconWrapper {
   /* may need to tighten up the margin if more icons added */
   margin-left: 8em;
   margin-right: 8em;
@@ -29,20 +29,20 @@
   opacity: 1;
 }
 
-.iconWrapper.zeroOpacity {
+.desktop .iconWrapper.zeroOpacity {
   opacity: 0;
 }
 
-.iconWrapper:hover {
+.desktop .iconWrapper:hover {
   cursor: pointer;
 }
 
 /* ContactHeader.js */
-.contactHeaderContainer {
+.desktop .contactHeaderContainer {
   min-height: 122px;
 }
 
-.contactHeaderWrapper {
+.desktop .contactHeaderWrapper {
   width: 1400px;
   margin-bottom: 2em;
 
@@ -52,13 +52,13 @@
   align-items: baseline;
 }
 
-.contactHeader {
+.desktop .contactHeader {
   color: #242736;
   font-size: 4em;
   font-family: "TypographExtraBold";
 }
 
-.contactEmail {
+.desktop .contactEmail {
   color: #242736;
   font-size: 2.25em;
   font-style: italic;

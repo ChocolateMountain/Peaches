@@ -1,2 +1,68 @@
 
 /* responsive - tablet - 750px max width */
+
+.tablet .contactWrapper {
+  min-height: 540px;
+  background-color: #c3bf87;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;    /* vertical centering */
+
+  flex-direction: column; /* separate icons on new line */  
+
+  position: relative;     /* above particles */
+}
+
+/* ContactIcons.js */
+.tablet .contactIconsWrapper {
+  display: flex;
+}
+
+.tablet .iconWrapper {
+  /* may need to tighten up the margin if more icons added */
+  margin-left: 8em;
+  margin-right: 8em;
+
+  /* on page load, fade icons */ 
+  transition: all 0.7s ease-in;
+  opacity: 1;
+}
+
+.tablet .iconWrapper.zeroOpacity {
+  opacity: 0;
+}
+
+.tablet .iconWrapper:hover {
+  cursor: pointer;
+}
+
+/* ContactHeader.js */
+.tablet .contactHeaderContainer {
+  min-height: 122px;
+}
+
+.tablet .contactHeaderWrapper {
+  width: 750px;
+  margin-bottom: 0.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-bottom: 1em;
+  border-bottom: 2px solid #939ed4;
+}
+
+.tablet .contactHeader {
+  color: #242736;
+  font-size: 4em;
+  font-family: "TypographExtraBold";
+}
+
+.tablet .contactEmail {
+  color: #242736;
+  font-size: 2.25em;
+  font-style: italic;
+}

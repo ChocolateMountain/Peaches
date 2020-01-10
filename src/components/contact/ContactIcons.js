@@ -52,7 +52,7 @@ export class ContactIcons extends Component {
   }
 
   onClickLinkedinIcon = (e) => {
-    window.open("https://www.linkedin.com/in/letao-chen-056055138/", "_blank", "noopener");
+    window.open("https://www.linkedin.com/in/letaochen", "_blank", "noopener");
   }
 
   render() {
