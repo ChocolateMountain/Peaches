@@ -1,0 +1,141 @@
+
+/* responsive - phone - 375px max width */
+
+.phone .introductionWrapper {
+  background-color: #0b0c10;
+}
+
+.phone .photo-container {
+  background-color: #2c2f3a;
+}
+
+/* fade in animation - on page load */
+.phone .introductionPhotoWrapper.zeroOpacity {
+  opacity: 0;
+}
+
+.phone .introductionPhotoWrapper {
+  transition: opacity 0.7s ease-in;
+  opacity: 1;
+}
+
+/* before the introduction - add empty space block */
+.phone .emptyBlock {
+  height: 100px;
+}
+
+/* container */
+.phone .introductionDescriptionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  min-height: 600px;
+
+  background-color: #1e2730;
+
+  position: relative; /* above particles */
+}
+
+.phone .introductionDescriptionWrapper {
+  width: 375px;
+
+  display: flex;
+}
+
+.phone .introductionDescriptionHeader {
+  color: #c7c562;
+  font-size: 4em;
+  font-family: "TypographExtraBold";
+
+  display: flex;
+  flex-direction: column;
+
+  flex-basis: 65%;
+
+  border-right: 2px solid #5e5b16;
+}
+
+.phone .introductionDescription {
+  color: #b8b8b8;
+  font-size: 1.25em;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  min-height: 90px;
+}
+
+.phone .introductionDescAndResumeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  flex-basis: 35%;
+  flex-direction: column;
+}
+
+/* resume button */
+.phone .resumeButton {
+
+  /* no longer absolute position - place under desc */
+  position: relative;
+
+  /* border + transparent background */
+  background: none;
+  border: 0.2em solid #d3a29b;
+
+  /* button size */
+  height: 3.4em;
+  width: 9em;
+
+  /* font */
+  font-family: "TypographLight";
+  font-size: 1.125em;
+  font-weight: bold;
+  color: #b8b8b8;
+}
+
+.phone .resumeButton::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10%;
+  background: #1e2730;
+  height: 0.3em;
+  right: 20%;
+  top: -0.21em;
+  transform: skewX(-45deg);
+  transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.phone .resumeButton::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10%;
+  background: #1e2730;
+  height: 0.3em;
+  left: 20%;
+  bottom: -0.25em;
+  transform: skewX(-45deg);
+  transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.phone .resumeButton:hover::before {
+  right: 80%;
+}
+
+.phone .resumeButton:hover::after {
+  left: 80%;
+}
+
+.phone .resumeButton:focus {
+  /* remove blue outline */
+  outline: 0;
+}

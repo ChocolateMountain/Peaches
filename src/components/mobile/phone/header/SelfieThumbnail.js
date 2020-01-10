@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import profilePic from '../../../../images/mobile/tablet/header/profile_pic_thumbnail_540x540.png';
+import profilePic from '../../../../images/mobile/phone/header/profile_pic_thumbnail_540x540.png';
 
 export class SelfieThumbnail extends Component {
 

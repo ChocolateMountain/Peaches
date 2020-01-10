@@ -12,6 +12,10 @@ import TabletHeader from './components/mobile/tablet/header/Header';
 import TabletHomepage from './components/mobile/tablet/homepage/Homepage';
 import TabletContact from './components/mobile/tablet/Contact/Contact';
 
+import PhoneHeader from './components/mobile/phone/header/Header';
+import PhoneHomepage from './components/mobile/phone/homepage/Homepage';
+import PhoneContact from './components/mobile/phone/Contact/Contact';
+
 function App() {
   const particleParams = {
     particles: {
@@ -65,9 +69,7 @@ function App() {
         <Contact />
       </div>
     );
-  } else if (responsive.isTablet || responsive.isPhone) {
-    // do phone development later - lump in w/ tablet for now 
-
+  } else if (responsive.isTablet) {
     app = (
       <div className="App tablet">
         <Particles className="particlesBackground" params={particleParams} />
@@ -75,6 +77,16 @@ function App() {
         <TabletHeader />
         <Route exact path="/" render={(routeProps) => <TabletHomepage {...routeProps} />} />
         <TabletContact />
+      </div>
+    );
+  } else if (responsive.isPhone) {
+    app = (
+      <div className="App phone">
+        <Particles className="particlesBackground" params={particleParams} />
+        
+        <PhoneHeader />
+        <Route exact path="/" render={(routeProps) => <PhoneHomepage {...routeProps} />} />
+        <PhoneContact />
       </div>
     );
   }

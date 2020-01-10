@@ -4,9 +4,9 @@ import SelfieThumbnail from './SelfieThumbnail';
 import NameText from './NameText';
 import HeaderLinks from './HeaderLinks';
 
-import '../../../../stylesheets/mobile/tablet/header/Header.css';
+import '../../../../stylesheets/mobile/phone/header/Header.css';
 
-export class TabletHeader extends Component {
+export class PhoneHeader extends Component {
   render() {
     return (
       <div id="headerWrapper" className="headerWrapper closeHeader">
@@ -20,4 +20,4 @@ export class TabletHeader extends Component {
   }
 }
 
-export default TabletHeader;
+export default PhoneHeader;

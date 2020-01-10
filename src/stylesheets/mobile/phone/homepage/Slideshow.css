@@ -1,0 +1,97 @@
+
+/* responsive - phone - 375px max width */
+
+@font-face {
+  font-family: "TypographExtraBold";
+  src: url("../../../../fonts/TYPOGRAPH PRO Extra Bold.ttf");
+}
+
+@font-face {
+  font-family: "TypographUltraLight";
+  src: url("../../../../fonts/TYPOGRAPH PRO Ultra Light.ttf");
+}
+
+/* center slideshow image */
+.phone .slideshowWrapper {
+  background-color: #0b0c10;
+}
+
+.phone .each-fade > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* on page load, fade into the first slideshow image */
+.phone .slideshowImageWrapper.zeroOpacity {
+  opacity: 0;
+}
+
+.phone .slideshowImageWrapper {
+  transition: opacity 0.7s ease-in;
+  opacity: 1;
+
+  /* too much empty space on top */
+  top: -100px;
+  position: relative;
+}
+
+/* container */
+.phone .imageDescriptionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 600px;
+  background-color: #292e44;
+
+  position: relative; /* above particles */
+}
+
+.phone .imageDescriptionWrapper {
+  width: 375px;
+}
+
+/* align items at bottom */
+.phone .imageHeaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-bottom: 1em;
+  border-bottom: 2px solid #5e5b16;
+}
+
+.phone .imageDescriptionHeader {
+  color: #c7c562;
+  font-size: 4em;
+  font-family: "TypographExtraBold";
+
+  min-height: 90px;
+}
+
+.phone .imageShortDescription {
+  color: #c7c562;
+  font-size: 2.25em;
+  font-style: italic;
+
+  min-height: 45px; /* prevent header from teleporting */
+}
+
+.phone .imageDescription {
+  color: #b8b8b8;
+  font-size: 1.25em;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  min-height: 90px;
+
+  padding-top: 1em;
+}
+
