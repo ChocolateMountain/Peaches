@@ -8,19 +8,19 @@
   src: url("../../fonts/TYPOGRAPH PRO Ultra Light.ttf");
 }
 
-.slideshowWrapper {
+.desktop .slideshowWrapper {
   background-color: #0b0c10;
   margin-bottom: 4em;
 }
 
-.each-fade > div {
+.desktop .each-fade > div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* container */
-.imageDescriptionContainer {
+.desktop .imageDescriptionContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,12 +32,12 @@
   margin-top: -60px;
 }
 
-.imageDescriptionWrapper {
+.desktop .imageDescriptionWrapper {
   width: 1400px;
 }
 
 /* align items at bottom */
-.imageHeaderWrapper {
+.desktop .imageHeaderWrapper {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -46,19 +46,19 @@
   min-height: 90px; /* ensures no "teleporting" typing cursor */
 }
 
-.imageDescriptionHeader {
+.desktop .imageDescriptionHeader {
   color: #c7c562;
   font-size: 4em;
   font-family: "TypographExtraBold";
 }
 
-.imageShortDescription {
+.desktop .imageShortDescription {
   color: #c7c562;
   font-size: 2.25em;
   font-style: italic;
 }
 
-.imageDescription {
+.desktop .imageDescription {
   color: #b8b8b8;
   font-size: 1.25em;
   font-family: 'Courier New', Courier, monospace;
@@ -73,11 +73,11 @@
 }
 
 /* on page load, fade into the first slideshow image */
-.slideshowImageWrapper.zeroOpacity {
+.desktop .slideshowImageWrapper.zeroOpacity {
   opacity: 0;
 }
 
-.slideshowImageWrapper {
+.desktop .slideshowImageWrapper {
   /* rellax uses css transform 3d property, switch from all to opacity */
   transition: opacity 0.7s ease-in;
   opacity: 1;

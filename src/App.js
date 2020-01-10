@@ -9,6 +9,8 @@ import Homepage from './components/homepage/Homepage';
 import Contact from './components/contact/Contact';
 
 import TabletHeader from './components/mobile/tablet/header/Header';
+import TabletHomepage from './components/mobile/tablet/homepage/Homepage';
+import TabletContact from './components/mobile/tablet/Contact/Contact';
 
 function App() {
   const particleParams = {
@@ -64,13 +66,15 @@ function App() {
       </div>
     );
   } else if (responsive.isTablet || responsive.isPhone) {
+    // do phone development later - lump in w/ tablet for now 
+
     app = (
       <div className="App tablet">
         <Particles className="particlesBackground" params={particleParams} />
         
         <TabletHeader />
-        <Route exact path="/" render={(routeProps) => <Homepage {...routeProps} />} />
-        <Contact />
+        <Route exact path="/" render={(routeProps) => <TabletHomepage {...routeProps} />} />
+        <TabletContact />
       </div>
     );
   }

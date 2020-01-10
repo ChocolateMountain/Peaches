@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Fade } from 'react-slideshow-image';
-import Rellax from 'rellax';
 
 import ImageDescription from './ImageDescription';
 
-import '../../stylesheets/homepage/Slideshow.css';
-import zblSlideshowImage from '../../images/slideshow/zbl_slideshow_image0.png';
-import clickerSlideshowImage from '../../images/slideshow/clicker_slideshow_image0.png';
+import '../../../../stylesheets/mobile/tablet/homepage/Slideshow.css';
+import zblSlideshowImage from '../../../../images/mobile/tablet/slideshow/zbl_slideshow_image0.png';
+import clickerSlideshowImage from '../../../../images/mobile/tablet/slideshow/clicker_slideshow_image0.png';
 
 export class Slideshow extends Component {
 
@@ -32,18 +31,6 @@ export class Slideshow extends Component {
         onPageLoadFadeIntoFirstImage: false
       });
     }, 700);
-
-    this.rellaxSlideshowImage = new Rellax('.rellaxSlideshowImage', {
-      speed: -1
-    });
-  }
-
-  // prevent memory leaks
-  componentWillUnmount() {
-    if (this.rellaxSlideshowImage) {
-      this.rellaxSlideshowImage.destroy();
-      this.rellaxSlideshowImage = null;
-    }
   }
 
   onImageChange = (oldIndex, newIndex) => {
@@ -64,8 +51,8 @@ export class Slideshow extends Component {
 
     const slideshowImageClasses = 
       this.state.onPageLoadFadeIntoFirstImage ? 
-      "slideshowImageWrapper zeroOpacity rellaxSlideshowImage" : 
-      "slideshowImageWrapper rellaxSlideshowImage";
+      "slideshowImageWrapper zeroOpacity" : 
+      "slideshowImageWrapper";
 
     return (
       <div className="slideshowWrapper">

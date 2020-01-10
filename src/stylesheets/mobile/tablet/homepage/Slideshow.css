@@ -1,2 +1,97 @@
 
 /* responsive - tablet - 750px max width */
+
+@font-face {
+  font-family: "TypographExtraBold";
+  src: url("../../../../fonts/TYPOGRAPH PRO Extra Bold.ttf");
+}
+
+@font-face {
+  font-family: "TypographUltraLight";
+  src: url("../../../../fonts/TYPOGRAPH PRO Ultra Light.ttf");
+}
+
+/* center slideshow image */
+.tablet .slideshowWrapper {
+  background-color: #0b0c10;
+}
+
+.tablet .each-fade > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* on page load, fade into the first slideshow image */
+.tablet .slideshowImageWrapper.zeroOpacity {
+  opacity: 0;
+}
+
+.tablet .slideshowImageWrapper {
+  transition: opacity 0.7s ease-in;
+  opacity: 1;
+
+  /* too much empty space on top */
+  top: -100px;
+  position: relative;
+}
+
+/* container */
+.tablet .imageDescriptionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 600px;
+  background-color: #292e44;
+
+  position: relative; /* above particles */
+}
+
+.tablet .imageDescriptionWrapper {
+  width: 750px;
+}
+
+/* align items at bottom */
+.tablet .imageHeaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-bottom: 1em;
+  border-bottom: 2px solid #5e5b16;
+}
+
+.tablet .imageDescriptionHeader {
+  color: #c7c562;
+  font-size: 4em;
+  font-family: "TypographExtraBold";
+
+  min-height: 90px;
+}
+
+.tablet .imageShortDescription {
+  color: #c7c562;
+  font-size: 2.25em;
+  font-style: italic;
+
+  min-height: 45px; /* prevent header from teleporting */
+}
+
+.tablet .imageDescription {
+  color: #b8b8b8;
+  font-size: 1.25em;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  min-height: 90px;
+
+  padding-top: 1em;
+}
+

@@ -1,34 +1,27 @@
 import React, { Component } from 'react';
 import Typed from 'react-typed';
-import Rellax from 'rellax';
 
 export class ImageDescription extends Component {
+
   state = {
     imageDescriptions: {
       zbl_image: {
         header: '.zbl',
         shortDescription: 'Patented Zoomable Image Standard',
-        description:  '.zbl (zoombable) images can be zoomed in/out without loss of quality. <br />' +
+        description:  'Zoom without loss of quality. <br />' +
                       '<b>O(n)</b> - linear space complexity. <br />' + 
-                      '<b>1 000 000 000 TIMES LIGHTER</b> than gigapixel images that offer similar zooming capabilities.'
+                      '<b>1 000 000 000 TIMES LIGHTER</b> than gigapixel images.'
       },
       clicker_image: {
         header: 'ACLICK',
         shortDescription: 'Dynamic Desktop Automation Tool',
-        description:  'Simple <b>autoclicker</b> designed for virtual desktop environment automation tasks. <br />' +
-                      'Compliments bash scripting automation tasks. <br />' + 
+        description:  '<b>Autoclicker</b> for desktop automation. <br />' +
+                      'Compliments bash scripting. <br />' + 
                       'Built with <b>OpenCV/JavaCV</b>.'
       }
     },
     shortDescriptionTyped: false
   };
-
-  componentDidMount() {
-    this.rellaxImageDescription = new Rellax('.rellaxImageDescription', {
-      speed: 4,
-      zindex: 2
-    });
-  }
 
   // avoid memory leaks 
   componentWillUnmount() {
@@ -63,9 +56,9 @@ export class ImageDescription extends Component {
   render() {
     const currentImageDescription = this.state.imageDescriptions[this.props.currentImageId];
     const { header, shortDescription, description } = currentImageDescription;
-    
+
     return (
-      <div className="imageDescriptionContainer rellaxImageDescription">
+      <div className="imageDescriptionContainer">
         <div className="imageDescriptionWrapper">
           <div className="imageHeaderWrapper">
             <div className="imageDescriptionHeader">
