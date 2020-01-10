@@ -17,13 +17,10 @@
 /* ContactIcons.js */
 .phone .contactIconsWrapper {
   display: flex;
+  flex-direction: column;
 }
 
 .phone .iconWrapper {
-  /* may need to tighten up the margin if more icons added */
-  margin-left: 8em;
-  margin-right: 8em;
-
   /* on page load, fade icons */ 
   transition: all 0.7s ease-in;
   opacity: 1;
@@ -39,7 +36,7 @@
 
 /* ContactHeader.js */
 .phone .contactHeaderContainer {
-  min-height: 122px;
+  min-height: 88px;
 }
 
 .phone .contactHeaderWrapper {
@@ -57,12 +54,12 @@
 
 .phone .contactHeader {
   color: #242736;
-  font-size: 4em;
+  font-size: 2em;
   font-family: "TypographExtraBold";
 }
 
 .phone .contactEmail {
   color: #242736;
-  font-size: 2.25em;
+  font-size: 1.25em;
   font-style: italic;
 }

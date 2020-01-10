@@ -8,16 +8,16 @@ export class ImageDescription extends Component {
       zbl_image: {
         header: '.zbl',
         shortDescription: 'Patented Zoomable Image Standard',
-        description:  'Zoom without loss of quality. <br />' +
-                      '<b>O(n)</b> - linear space complexity. <br />' + 
-                      '<b>1 000 000 000 TIMES LIGHTER</b> than gigapixel images.'
+        description:  'Zoom without loss of quality<br />' +
+                      '<b>O(n)</b> - linear space complexity<br />' + 
+                      '<b>BILLION TIMES LIGHTER</b> than gigapixels'
       },
       clicker_image: {
         header: 'ACLICK',
         shortDescription: 'Dynamic Desktop Automation Tool',
-        description:  '<b>Autoclicker</b> for desktop automation. <br />' +
-                      'Compliments bash scripting. <br />' + 
-                      'Built with <b>OpenCV/JavaCV</b>.'
+        description:  '<b>Autoclicker</b> for desktop automation<br />' +
+                      'Compliments bash scripting<br />' + 
+                      'Built with <b>OpenCV/JavaCV</b>'
       }
     },
     shortDescriptionTyped: false

@@ -30,7 +30,7 @@
   justify-content: center;
   align-items: center;
   
-  min-height: 600px;
+  min-height: 440px;
 
   background-color: #1e2730;
 
@@ -41,24 +41,27 @@
   width: 375px;
 
   display: flex;
+  flex-direction: column;
 }
 
 .phone .introductionDescriptionHeader {
   color: #c7c562;
-  font-size: 4em;
+  font-size: 2em;
   font-family: "TypographExtraBold";
 
   display: flex;
   flex-direction: column;
 
-  flex-basis: 65%;
+  border-left: 2px solid #5e5b16;
+}
 
-  border-right: 2px solid #5e5b16;
+.phone .introductionDescriptionHeader > span {
+  margin-left: 0.5em;
 }
 
 .phone .introductionDescription {
   color: #b8b8b8;
-  font-size: 1.25em;
+  font-size: 0.875em;
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.5em;
 
@@ -67,17 +70,13 @@
   justify-content: center;
   text-align: center;
 
-  min-height: 90px;
+  min-height: 21px;
+  margin-left: 0.5em;
 }
 
 .phone .introductionDescAndResumeWrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  flex-basis: 35%;
-  flex-direction: column;
+  margin-top: 1.75em;
 }
 
 /* resume button */
@@ -91,14 +90,20 @@
   border: 0.2em solid #d3a29b;
 
   /* button size */
-  height: 3.4em;
-  width: 9em;
+  height: 3em;
+  width: 8em;
 
   /* font */
   font-family: "TypographLight";
-  font-size: 1.125em;
+  font-size: 0.875em;
   font-weight: bold;
   color: #b8b8b8;
+
+  /* similar to float: right */
+  margin-left: auto;
+  order: 2;
+
+  margin-right: 0.5em;
 }
 
 .phone .resumeButton::before {
