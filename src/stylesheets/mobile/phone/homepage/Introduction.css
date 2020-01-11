@@ -1,5 +1,5 @@
 
-/* responsive - phone - 375px max width */
+/* responsive - phone - 350px max width */
 
 .phone .introductionWrapper {
   background-color: #0b0c10;
@@ -17,6 +17,14 @@
 .phone .introductionPhotoWrapper {
   transition: opacity 0.7s ease-in;
   opacity: 1;
+}
+
+.phone .photo-container {
+  height: 208px;
+}
+
+.phone .introductionPhotoWrapper img {
+  transform: scale(0.4);
 }
 
 /* before the introduction - add empty space block */
@@ -38,7 +46,7 @@
 }
 
 .phone .introductionDescriptionWrapper {
-  width: 375px;
+  width: 350px;
 
   display: flex;
   flex-direction: column;
@@ -66,9 +74,6 @@
   line-height: 1.5em;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 
   min-height: 21px;
   margin-left: 0.5em;

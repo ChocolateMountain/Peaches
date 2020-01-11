@@ -10,7 +10,7 @@ export class IntroductionDescription extends Component {
     introductionDescriptions: [
       {
         header: ["DEVELOPER", "MENTOR", "INNOVATOR"],
-        description: "Let's create something <b>cool!</b>"
+        description: "Let's create <br >something <b>cool!</b>"
       }
     ]
   };

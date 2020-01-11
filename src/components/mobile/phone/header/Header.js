@@ -9,7 +9,7 @@ import '../../../../stylesheets/mobile/phone/header/Header.css';
 export class PhoneHeader extends Component {
   render() {
     return (
-      <div id="headerWrapper" className="headerWrapper closeHeader">
+      <div id="headerWrapper" className="headerWrapper">
         <header>
           <SelfieThumbnail />
           <NameText />

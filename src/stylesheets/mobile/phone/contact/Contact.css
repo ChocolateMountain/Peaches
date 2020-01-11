@@ -1,5 +1,5 @@
 
-/* responsive - phone - 375px max width */
+/* responsive - phone - 350px max width */
 
 .phone .contactWrapper {
   min-height: 540px;
@@ -40,7 +40,7 @@
 }
 
 .phone .contactHeaderWrapper {
-  width: 375px;
+  width: 350px;
   margin-bottom: 0.5em;
 
   display: flex;

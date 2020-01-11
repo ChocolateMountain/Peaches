@@ -1,5 +1,5 @@
 
-/* responsive - phone - 375px max width */
+/* responsive - phone - 350px max width */
 
 @font-face {
   font-family: "TypographExtraBold";
@@ -32,8 +32,14 @@
   opacity: 1;
 
   /* too much empty space on top */
-  top: -100px;
+  top: -275px;
   position: relative;
+
+  height: 300px;
+}
+
+.phone .slideshowImageWrapper img {
+  transform: scale(0.5);
 }
 
 /* container */
@@ -49,7 +55,7 @@
 }
 
 .phone .imageDescriptionWrapper {
-  width: 375px;
+  width: 350px;
 }
 
 /* align items at bottom */
@@ -59,7 +65,7 @@
   align-items: center;
   flex-direction: column;
 
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   border-bottom: 2px solid #5e5b16;
 }
 
@@ -73,7 +79,7 @@
 
 .phone .imageShortDescription {
   color: #c7c562;
-  font-size: 1.25em;
+  font-size: 1em;
   font-style: italic;
 
   min-height: 25px; /* prevent header from teleporting */
