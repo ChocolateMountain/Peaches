@@ -77,6 +77,12 @@
   border-right: 2px solid #5e5b16;
 }
 
+.tablet #homeLink {
+  /* single link - no border - 100% flex basis */
+  flex-basis: 100%;
+  border-right: 0;
+}
+
 .tablet .headerLinkWrapper > a {
   color: #c7c562;
   font-size: 1.875em;
@@ -113,5 +119,5 @@
   opacity: 1;
 
   transform: scale(0.5);
-  height: 700px;
+  height: 720px;
 }

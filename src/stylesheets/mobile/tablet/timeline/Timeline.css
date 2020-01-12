@@ -1,0 +1,6 @@
+
+.tablet .timelineWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

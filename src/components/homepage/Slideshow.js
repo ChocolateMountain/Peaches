@@ -34,7 +34,7 @@ export class Slideshow extends Component {
     }, 700);
 
     this.rellaxSlideshowImage = new Rellax('.rellaxSlideshowImage', {
-      speed: -1
+      speed: -2
     });
   }
 

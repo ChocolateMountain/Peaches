@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Typed from 'react-typed';
-import Rellax from 'rellax';
 
 import resume from '../../documents/resume_letaochen_2019.pdf';
 
@@ -15,13 +14,6 @@ export class IntroductionDescription extends Component {
     ]
   };
 
-  componentDidMount() {
-    this.rellaxIntroductionDescription = new Rellax('.rellaxIntroductionDescription', {
-      speed: 2,
-      zindex: 2
-    });
-  }
-
   // avoid memory leaks 
   componentWillUnmount() {
     if (this.typedIntroductionDescriptionHeader) {
@@ -31,10 +23,6 @@ export class IntroductionDescription extends Component {
     if (this.typedIntroductionDescription) {
       this.typedIntroductionDescription.destroy();
       this.typedIntroductionDescription = null;
-    }
-    if (this.rellaxIntroductionDescription) {
-      this.rellaxIntroductionDescription.destroy();
-      this.rellaxIntroductionDescription = null;
     }
   }
 
@@ -46,7 +34,7 @@ export class IntroductionDescription extends Component {
     const { header, description } = this.state.introductionDescriptions[0];
 
     return (
-      <div className="introductionDescriptionContainer rellaxIntroductionDescription">
+      <div className="introductionDescriptionContainer">
         <div className="introductionDescriptionWrapper">
           <div className="introductionDescriptionHeader">
             <Typed  typedRef={(typed => { this.typedIntroductionDescriptionHeader = typed; })} 

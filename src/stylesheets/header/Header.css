@@ -44,8 +44,21 @@
   margin-right: 1em;
 }
 
-.desktop .headerLinkWrapper {
+.desktop .headerLinkWrapper > a {
   margin-left: 2em;
+}
+
+.desktop .headerLinkWrapper:first-child {
+  border-right: 2px solid #5e5b16;
+}
+
+.desktop .headerLinkWrapper:first-child > a {
+  margin-right: 2em;
+}
+
+.desktop #homeLink, .desktop #homeLink > a {
+  margin-right: 0;
+  border-right: 0;
 }
 
 /* links */

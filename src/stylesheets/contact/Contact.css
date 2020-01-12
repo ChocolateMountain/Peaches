@@ -1,6 +1,6 @@
 /* Contact.js */
 .desktop .contactWrapper {
-  min-height: 540px;
+  min-height: 600px;
   background-color: #c3bf87;
   
   display: flex;
@@ -8,8 +8,6 @@
   align-items: center;    /* vertical centering */
 
   flex-direction: column; /* separate icons on new line */  
-
-  margin-top: -360px;
   
   position: relative;     /* above particles */
 }

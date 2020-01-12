@@ -1,6 +1,7 @@
 
 .desktop .introductionWrapper {
   background-color: #0b0c10;
+  margin-top: 200px;
 }
 
 .desktop .photo-container {
@@ -30,8 +31,9 @@
   padding-bottom: 4em;
 
   background-color: #1e2730;
-  margin-top: 540px;
-  margin-bottom: 70px;
+  margin-top: 300px;
+
+  position: relative;
 }
 
 .desktop .introductionDescriptionWrapper {

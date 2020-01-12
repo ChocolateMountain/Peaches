@@ -6,15 +6,21 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/Header';
 import Homepage from './components/homepage/Homepage';
+import Innovations from './components/innovations/Innovations';
+import Timeline from './components/timeline/Timeline';
 import Contact from './components/contact/Contact';
 
 import TabletHeader from './components/mobile/tablet/header/Header';
 import TabletHomepage from './components/mobile/tablet/homepage/Homepage';
-import TabletContact from './components/mobile/tablet/Contact/Contact';
+import TabletInnovations from './components/mobile/tablet/innovations/Innovations';
+import TabletTimeline from './components/mobile/tablet/timeline/Timeline';
+import TabletContact from './components/mobile/tablet/contact/Contact';
 
 import PhoneHeader from './components/mobile/phone/header/Header';
 import PhoneHomepage from './components/mobile/phone/homepage/Homepage';
-import PhoneContact from './components/mobile/phone/Contact/Contact';
+import PhoneInnovations from './components/mobile/phone/innovations/Innovations';
+import PhoneTimeline from './components/mobile/phone/timeline/Timeline';
+import PhoneContact from './components/mobile/phone/contact/Contact';
 
 function App() {
   const particleParams = {
@@ -66,6 +72,8 @@ function App() {
         
         <Header />
         <Route exact path="/" render={(routeProps) => <Homepage {...routeProps} />} />
+        <Route exact path="/innovations" render={(routeProps) => <Innovations {...routeProps} />} />
+        <Route exact path="/timeline" render={(routeProps) => <Timeline {...routeProps} />} />
         <Contact />
       </div>
     );
@@ -76,6 +84,8 @@ function App() {
         
         <TabletHeader />
         <Route exact path="/" render={(routeProps) => <TabletHomepage {...routeProps} />} />
+        <Route exact path="/innovations" render={(routeProps) => <TabletInnovations {...routeProps} />} />
+        <Route exact path="/timeline" render={(routeProps) => <TabletTimeline {...routeProps} />} />
         <TabletContact />
       </div>
     );
@@ -86,6 +96,8 @@ function App() {
         
         <PhoneHeader />
         <Route exact path="/" render={(routeProps) => <PhoneHomepage {...routeProps} />} />
+        <Route exact path="/innovations" render={(routeProps) => <PhoneInnovations {...routeProps} />} />
+        <Route exact path="/timeline" render={(routeProps) => <PhoneTimeline {...routeProps} />} />
         <PhoneContact />
       </div>
     );
