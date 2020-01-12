@@ -16,4 +16,4 @@ export class TabletContact extends Component {
   }
 }
 
-export default TabletContact;
+export default TabletContact; 

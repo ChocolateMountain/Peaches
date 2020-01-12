@@ -47,4 +47,4 @@ export class ContactIcons extends Component {
   }
 }
 
-export default ContactIcons;
+export default ContactIcons; 

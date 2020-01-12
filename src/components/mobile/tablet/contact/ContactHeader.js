@@ -45,4 +45,4 @@ export class ContactHeader extends Component {
   }
 }
 
-export default ContactHeader;
+export default ContactHeader; 
